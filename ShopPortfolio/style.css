@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+}
+
+.navbar {
+    display: inline-flex;
+    background-color: darkolivegreen;
+    color: white;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    padding-left: 20px;
+    gap: 20px;
+}
+.navbar-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+}
+
+.items-container {
+    width: 75%;
+    height: auto;
+    margin: 50px auto;
+    background-color: lightgrey;
+    border-radius: 15px;
+    text-align: center;
+    display: grid;
+    grid: 0.75fr / 0.75fr;
+    justify-content: center;
+}
+.item {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 15px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template:
+        "image image" 150px
+        "nom bouton" 50px
+        "prix bouton" 50px / 1fr 1fr;
+}
+.item img {
+    grid-area: image;
+}
+.item #item-name {
+    grid-area: nom;
+}
+.item #item-price {
+    grid-area: prix;
+}
+.item button {
+    grid-area: bouton;
+    background-color: darkolivegreen;
+    color: white;
+    border-radius: 10px;
+}

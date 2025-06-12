@@ -1,4 +1,4 @@
-import { addItem } from "./cart-page/cart.js";
+// import { addItem } from "./cart-page/cart.js";
 
 const cartNav = document.getElementById('cart-nav');
 const test = document.getElementById('test');
@@ -11,7 +11,7 @@ function addToCart(event) {
     item.item_image = button.dataset.image;
     item.item_name = button.dataset.name;
     item.item_price = button.dataset.price;
-    addItem(item);
+    // addItem(item);
 }
 
 function removeFromCart() {

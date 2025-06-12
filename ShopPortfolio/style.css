@@ -21,6 +21,12 @@ body {
     list-style: none;
     gap: 20px;
 }
+#cart-nav {
+    padding: 5px;
+    background-color: white;
+    color: darkolivegreen;
+    border-radius: 50px;
+}
 a {
     color: white;
     text-decoration: none;

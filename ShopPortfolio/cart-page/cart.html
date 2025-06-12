@@ -3,23 +3,26 @@
     <head>
         <title>my-cart</title>
         <link href="cart-style.css" rel="stylesheet">
-        <script async src="cart.js"></script>
+        <script type="module" src="cart.js"></script>
     </head>
     <body>
-        <!-- <header>
+        <header>
             <div class="navbar">
                 <h1>Shop<br>Portfolio</h1>
                 <ul class="navbar-list">
                     <li><a href="../index.html">My Shop</a></li>
                     <li>Contact</li>
                     <li>
-                        <a href="./cart-page/cart.html">My cart</a>
+                        <a href="cart.html">My cart</a>
                         <span id="cart-nav">0</span>
                     </li>
                 </ul>
             </div>
-        </header> -->
-        <div id="test">Test</div>
-        <div id="footer">Footer</div>
+        </header>
+        <div id="items-container"></div>
+        <div class="resume-cart">
+            <h2>Resume Order :</h2>
+            <p id="order-price">Order Total Price :</p>
+        </div>
     </body>
 </html>

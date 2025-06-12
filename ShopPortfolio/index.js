@@ -1,23 +1,30 @@
-// import { addItem } from "./cart-page/cart.js";
+ import { addItem, cartList } from "./cart-page/cart.js";
 
-const cartNav = document.getElementById('cart-nav');
-const test = document.getElementById('test');
+const cartNumber = document.getElementById('cart-nav');
 const cartButton = document.querySelectorAll('button');
 
 function addToCart(event) {
-    cartNav.innerHTML = parseInt(cartNav.innerHTML) + 1;
     const button = document.getElementById(event.target.id);
     let item = new Object();
-    item.item_image = button.dataset.image;
+    item.item_id = button.dataset.id;
+    item.item_src = button.dataset.image;
     item.item_name = button.dataset.name;
     item.item_price = button.dataset.price;
-    // addItem(item);
+    addItem(item);
+    refreshUI();
 }
 
-function removeFromCart() {
-    cartNav.innerHTML = parseInt(cartNav.innerHTML) - 1;
+function refreshUI() {
+    let cartList = JSON.parse(localStorage.getItem("cart")) || [];
+    let totalCount = 0
+    cartList.map((element) => {
+        totalCount += element.count;
+    });
+    cartNumber.innerHTML = totalCount;
 }
 
 cartButton.forEach(element => {
     element.addEventListener("click", addToCart);
 });
+
+document.body.onload = refreshUI;

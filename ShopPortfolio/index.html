@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Shop Portfolio</title>
+        <meta charset=“UTF-8”>
+        <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+        <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
         <link href="style.css" rel="stylesheet">
-        <script async src="index.js"></script>
+        <script type="module" src="index.js"></script>
+        <!-- <script type="module" src="./cart-page/cart.js"></script> -->
+        <title>Shop Portfolio</title>
     </head>
     <body>
         <header>
@@ -13,8 +17,9 @@
                     <li>My Shop</li>
                     <li>Contact</li>
                     <li>
-                        My cart
-                        <span id="cart-nav">0</span>
+                        <a href="./cart-page/cart.html">My cart
+                        <span id="cart-nav">0</span></a>
+                        <span id="test"></span>
                     </li>
                 </ul>
             </div>
@@ -22,16 +27,28 @@
         <main>
             <div class="items-container">
                 <div class="item">
-                    <img src="./img/item_img.png" alt="premier item">
+                    <img id="item-image" src="./img/item_img.png" alt="premier item">
                     <h2 id="item-name">Premier Item</h2>
                     <h2 id="item-price">19.99$</h2>
-                    <button class="cart-button"><img src="./img/add_to_cart.png"></button>
+                    <button class="cart-button">
+                        <img id= "button1" src="./img/add_to_cart.png"
+                            data-image="./img/item_img.png"
+                            data-name="premier item"
+                            data-price="19.99$"
+                        >
+                    </button>
                 </div>
                 <div class="item">
-                    <img src="./img/item_img.png" alt="premier item">
-                    <h2 id="item-name">Premier Item</h2>
-                    <h2 id="item-price">19.99$</h2>
-                    <button class="cart-button"><img src="./img/add_to_cart.png"></button>
+                    <img id="item-image" src="./img/item_img.png" alt="premier item">
+                    <h2 id="item-name">Second Item</h2>
+                    <h2 id="item-price">9.99$</h2>
+                    <button class="cart-button">
+                        <img id= "button2" src="./img/add_to_cart.png"
+                            data-image="./img/item_img.png"
+                            data-name="second item"
+                            data-price="9.99$"
+                        >
+                    </button>
                 </div>
             </div>
         </main>

@@ -21,6 +21,10 @@ body {
     list-style: none;
     gap: 20px;
 }
+a {
+    color: white;
+    text-decoration: none;
+}
 
 .items-container {
     width: 75%;
